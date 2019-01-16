@@ -80,7 +80,7 @@ public class ChatServerReturn implements Runnable {
 
                     message = input.nextLine();
 
-                    System.out.println("Client said: " + message);
+                    System.out.println("\nClient: " + message);
 
                     for (int i = 0; i < ChatServer.connectionArray.size(); i++){
                         

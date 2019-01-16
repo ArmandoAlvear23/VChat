@@ -120,7 +120,7 @@ public class ChatServer {
         
         //Testing info gathered
         System.out.println("User ID received from client: " + id);
-        System.out.println("User password received from client: " + pass);
+        //System.out.println("User password received from client: " + pass);
         
         handler = new DBHandler();
         connection = handler.getConnection();
@@ -148,22 +148,21 @@ public class ChatServer {
             }
             
             if(count==1){
-
+                userName = fName + " " + lName;
                 //send int 1 to client
-                System.out.println("Login Successfull!");
+                System.out.println(userName + " has connected...");
                 result = "1";      
                 output.println(result);
                 output.println(fName);
                 output.println(lName);
                 output.println(email);
                 output.flush();
-                userName = fName + " " + lName;
 
             }
             else {
 
                 //send int 0 to client
-                System.out.println("Username or Password is incorrect.");
+                System.out.println("Username or Password is incorrect...\n");
                 result = "0";
                 output.println(result);
                 output.flush();

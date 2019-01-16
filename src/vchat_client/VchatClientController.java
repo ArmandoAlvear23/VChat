@@ -119,10 +119,10 @@ public class VchatClientController implements Runnable{
      */
     public void disconnect() throws IOException {
         
-        output.println(VchatClient.getUserName() + " has disconnected.");                 
+        output.println(VchatClient.getUserName() + " has disconnected...");                 
         output.flush();
         socket.close();
-//        System.exit(0);
+        System.exit(0);
 
     }
     
