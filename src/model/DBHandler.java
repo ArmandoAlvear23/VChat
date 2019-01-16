@@ -17,7 +17,7 @@ public class DBHandler extends Configs{
                Configs.dbport + "/" + Configs.dbname;
         try {
             
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             
         } catch (ClassNotFoundException e){
             e.printStackTrace();
